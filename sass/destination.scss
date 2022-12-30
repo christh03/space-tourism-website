@@ -1,0 +1,143 @@
+@use "./reset";
+@use "./nav";
+@use "./variables";
+
+body {
+  background: url("../assets/destination/background-destination-desktop.jpg")
+    no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.main {
+  width: 100%;
+}
+
+.destination {
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  &__pick {
+    grid-column: 1/4;
+    grid-row: 1/1;
+    width: auto;
+    margin-top: 76px;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+    color: variables.$tertiary-color;
+    font-family: variables.$Barlow-Condensed;
+  }
+
+  &__digit {
+    opacity: 0.25;
+    font-weight: 700;
+    margin-right: 28px;
+  }
+
+  &__tab-container {
+    width: 35%;
+    height: 37px;
+    margin-top: 64px;
+    margin-bottom: 37px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    justify-self: end;
+  }
+
+  .btn {
+    margin-right: 35px;
+    padding-bottom: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    font-family: variables.$Barlow-Condensed;
+    color: variables.$tertiary-color;
+  }
+
+  &__tab--active {
+    border-bottom: 3px solid variables.$tertiary-color;
+  }
+
+  &__content {
+    grid-column: 1/4;
+    grid-row: 3/3;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 45%;
+    padding-left: 4rem;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  &__article {
+    position: relative;
+    width: 445px;
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: variables.$Bellefair;
+    font-weight: 400;
+    font-size: 100px;
+    color: variables.$tertiary-color;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 54px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    font-family: variables.$Barlow;
+    color: variables.$secudary-color;
+  }
+
+  &__line {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin-bottom: 28px;
+  }
+
+  .distance {
+    display: flex;
+    gap: 79px;
+
+    &__container {
+      width: auto;
+    }
+
+    &__heading {
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 2.36px;
+      font-family: variables.$Barlow-Condensed;
+      color: variables.$secudary-color;
+    }
+
+    &__text {
+      font-size: 28px;
+      font-family: variables.$Bellefair;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: variables.$tertiary-color;
+    }
+  }
+}
