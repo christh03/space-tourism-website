@@ -1,22 +1,23 @@
+@use "./reset";
 @use "./variables";
 
 .header {
   width: 95%;
-  margin-top: 2.5rem;
+  margin-top: 40px;
   margin-left: auto;
 }
 
 .nav {
   position: relative;
   width: 100%;
-  height: 6rem;
+  height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &__line {
     position: absolute;
-    left: 150px;
+    left: 10%;
     width: 37%;
     height: 1px;
     z-index: 100;
@@ -25,8 +26,8 @@
   }
 
   &__logo {
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
   }
 
   &__menu {
@@ -36,20 +37,22 @@
 
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    // gap: 40px;
+    gap: 4%;
+
     list-style: none;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
   }
 
   &__link {
-    padding: 2rem 0;
+    padding: 2.66rem 0;
 
     text-decoration: none;
     text-transform: uppercase;
     font-family: variables.$Barlow-Condensed;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 2.7px;
     color: variables.$tertiary-color;
 
@@ -60,6 +63,6 @@
 
   &__digit {
     font-weight: 700;
-    padding-right: 0.6875rem;
+    padding-right: 0.916rem;
   }
 }
