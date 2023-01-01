@@ -16,8 +16,7 @@ body {
 
 .destination {
   position: relative;
-  // max-width: 1120px;
-  max-width: 78%;
+  max-width: 1000px;
 
   margin: 0 auto;
   display: grid;
@@ -45,7 +44,7 @@ body {
   }
 
   &__tab-container {
-    width: 39.7%;
+    width: 44.9%;
     height: 3.083rem;
     margin-top: 64px;
     margin-bottom: 3.083rem;
@@ -73,14 +72,22 @@ body {
   &__content {
     grid-column: 1/4;
     grid-row: 3/3;
-
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateZ(-5rem);
+    transition: 0.5s ease-in-out;
+  }
+
+  &__content--active {
+    opacity: 1;
+    transform: translateZ(0);
+    transition: 0.3s ease-out;
   }
 
   &__img {
     width: 40%;
-    padding-left: 64px;
+    padding-left: 5.33rem;
   }
 
   .img {
@@ -90,7 +97,6 @@ body {
   &__article {
     position: relative;
     margin-bottom: 50px;
-
     width: 445px;
   }
 

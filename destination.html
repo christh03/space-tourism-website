@@ -14,8 +14,8 @@
 
     <!-- Custon CSS -->
     <link rel="stylesheet" href="css/destination.css" />
-    <!-- Normalize -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- JS -->
+    <script defer src="./js/destination.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -56,15 +56,16 @@
         <div class="destination__tab-container">
           <buttton
             class="btn destination__tab destination__tab--1 destination__tab--active"
+            data-tab="1"
             >Moon</buttton
           >
-          <buttton class="btn destination__tab destination__tab--2"
+          <buttton class="btn destination__tab destination__tab--2" data-tab="2"
             >Mars</buttton
           >
-          <buttton class="btn destination__tab destination__tab--3"
+          <buttton class="btn destination__tab destination__tab--3" data-tab="3"
             >Europa</buttton
           >
-          <buttton class="btn destination__tab destination__tab--4"
+          <buttton class="btn destination__tab destination__tab--4" data-tab="4"
             >Titan</buttton
           >
         </div>
@@ -103,9 +104,7 @@
           </article>
         </div>
 
-        <div
-          class="destination__content destination__content--2 destination__content--active"
-        >
+        <div class="destination__content destination__content--2">
           <div class="destination__img destination__img--2">
             <img
               class="img"
@@ -136,9 +135,7 @@
           </article>
         </div>
 
-        <div
-          class="destination__content destination__content--3 destination__content--active"
-        >
+        <div class="destination__content destination__content--3">
           <div class="destination__img destination__img--3">
             <img
               class="img"
@@ -170,9 +167,7 @@
           </article>
         </div>
 
-        <div
-          class="destination__content destination__content--4 destination__content--active"
-        >
+        <div class="destination__content destination__content--4">
           <div class="destination__img destination__img--4">
             <img
               class="img"
