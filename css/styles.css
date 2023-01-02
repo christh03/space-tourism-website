@@ -65,6 +65,9 @@ body {
 .nav__link--active {
   border-bottom: 3px solid #ffffff;
 }
+.nav__link:hover {
+  border-bottom: 3px solid #979797;
+}
 .nav__digit {
   font-weight: 700;
   padding-right: 0.916rem;
@@ -74,10 +77,12 @@ body {
   background: url("../assets/home/background-home-desktop.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
+  background-color: #0b0d17;
 }
 
 .main {
   width: 100%;
+  padding: 5rem 1rem;
 }
 
 .section {
@@ -121,7 +126,7 @@ body {
   font-weight: 400;
   font-family: "Bellefair", serif;
   letter-spacing: 2px;
-  align-self: flex-end;
+  align-self: center;
   outline: 88px solid transparent;
   transition: 0.7s ease-in-out;
 }

@@ -60,6 +60,9 @@
       border-bottom: 3px solid variables.$tertiary-color;
     }
   }
+  &__link:hover {
+    border-bottom: 3px solid #979797;
+  }
 
   &__digit {
     font-weight: 700;

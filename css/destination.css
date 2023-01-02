@@ -65,6 +65,9 @@ body {
 .nav__link--active {
   border-bottom: 3px solid #ffffff;
 }
+.nav__link:hover {
+  border-bottom: 3px solid #979797;
+}
 .nav__digit {
   font-weight: 700;
   padding-right: 0.916rem;
@@ -73,21 +76,21 @@ body {
 body {
   background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
   background-color: #0b0d17;
 }
 
 .main {
   width: 100%;
+  padding: 5rem 1rem;
 }
 
 .destination {
-  position: relative;
+  overflow: hidden;
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
 }
 .destination__pick {
   grid-column: 1/4;
@@ -108,13 +111,13 @@ body {
   margin-right: 2.33rem;
 }
 .destination__tab-container {
-  width: 44.9%;
+  width: 44.4%;
   height: 3.083rem;
   margin-top: 64px;
   margin-bottom: 3.083rem;
   grid-column: 1/4;
   grid-row: 2/3;
-  justify-self: end;
+  justify-self: flex-end;
 }
 .destination .btn {
   margin-right: 2.91rem;
@@ -132,17 +135,16 @@ body {
 }
 .destination__content {
   grid-column: 1/4;
-  grid-row: 3/3;
+  grid-row: 3/4;
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  transform: translateZ(-5rem);
-  transition: 0.5s ease-in-out;
+  transform: translateX(-5rem);
 }
 .destination__content--active {
   opacity: 1;
-  transform: translateZ(0);
-  transition: 0.3s ease-out;
+  transform: translateX(0);
+  transition: 0.7s ease-in-out;
 }
 .destination__img {
   width: 40%;
@@ -201,6 +203,10 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.tab-hover {
+  border-bottom: 3px solid #979797;
 }
 
 /*# sourceMappingURL=destination.css.map */

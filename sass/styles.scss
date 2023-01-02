@@ -6,10 +6,12 @@ body {
   background: url("../assets/home/background-home-desktop.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
+  background-color: variables.$primary-color;
 }
 
 .main {
   width: 100%;
+  padding: 5rem 1rem;
 }
 
 .section {
@@ -57,7 +59,7 @@ body {
     font-weight: 400;
     font-family: variables.$Bellefair;
     letter-spacing: 2px;
-    align-self: flex-end;
+    align-self: center;
     outline: 88px solid transparent;
     transition: 0.7s ease-in-out;
 
