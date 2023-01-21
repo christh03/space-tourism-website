@@ -1,0 +1,145 @@
+@use "./reset";
+@use "./nav";
+@use "./variables";
+
+.body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/crew/background-crew-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-color: variables.$primary-color;
+  height: 95vh;
+}
+
+.main {
+  margin-top: 10rem;
+  width: 100%;
+}
+
+.crew {
+  overflow: hidden;
+  position: relative;
+  max-width: 94rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  z-index: 100;
+
+  &__description {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: auto;
+    font-size: 2.33rem;
+    font-weight: 400;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+    color: variables.$tertiary-color;
+    font-family: variables.$Barlow-Condensed;
+  }
+
+  &__digit {
+    opacity: 0.25;
+    font-weight: 700;
+    margin-right: 2.33rem;
+  }
+
+  &__content {
+    position: relative;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateZ(5rem);
+    transition: 0.1s ease-in-out;
+  }
+
+  &__content--active {
+    transition: 1s ease-in-out;
+    opacity: 1;
+    transform: translateZ(0);
+  }
+
+  &-article {
+    width: 44.66rem;
+    margin-top: 10rem;
+
+    &__subheading {
+      color: variables.$tertiary-color;
+      text-transform: uppercase;
+      font-size: 2.66rem;
+      font-weight: 400;
+      font-family: variables.$Bellefair;
+      line-height: 37px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    &__heading {
+      font-family: variables.$Bellefair;
+      font-weight: 400;
+      font-size: 4rem;
+      line-height: 64px;
+      text-transform: uppercase;
+      color: variables.$tertiary-color;
+    }
+
+    &__text {
+      max-width: 87%;
+      font-family: variables.$Barlow;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 28px;
+      color: variables.$secudary-color;
+    }
+  }
+
+  &__img {
+    width: 51rem;
+    height: 51rem;
+
+    align-self: flex-end;
+  }
+
+  .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: 2rem;
+    border: none;
+    overflow: hidden;
+  }
+
+  &__tab-container {
+    position: absolute;
+    bottom: 13%;
+  }
+}
+
+.btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  margin-right: 2rem;
+  mix-blend-mode: normal;
+  background-color: variables.$tertiary-color;
+  opacity: 0.17;
+  cursor: pointer;
+}
+
+.crew__tab--active {
+  opacity: 1;
+}
+
+.crew__img--1 > .img,
+.crew__img--2 > .img {
+  object-position: 11rem;
+}
+
+.crew__img--3 > .img {
+  object-position: 7rem;
+}

@@ -2,32 +2,31 @@
 @use "./nav";
 @use "./variables";
 
-body {
+.body {
   background: url("../assets/destination/background-destination-desktop.jpg")
     no-repeat;
   background-size: cover;
   background-color: variables.$primary-color;
+  height: 95%;
 }
 
 .main {
   width: 100%;
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
 }
 
 .destination {
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 90rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
 
-  &__pick {
+  &__description {
     grid-column: 1/4;
     grid-row: 1/1;
     width: auto;
-    margin-top: 6.33rem;
-    margin-left: 2.66rem;
     font-size: 2.33rem;
     font-weight: 400;
     letter-spacing: 4.72px;
@@ -43,9 +42,9 @@ body {
   }
 
   &__tab-container {
-    width: 44.4%;
+    width: 40.5%;
     height: 3.083rem;
-    margin-top: 64px;
+    margin-top: 5.333rem;
     margin-bottom: 3.083rem;
     grid-column: 1/4;
     grid-row: 2/3;
@@ -75,7 +74,6 @@ body {
     justify-content: space-between;
     opacity: 0;
     transform: translateX(-5rem);
-    // transition: 0.1s ease;
   }
 
   &__content--active {
@@ -85,35 +83,35 @@ body {
   }
 
   &__img {
-    width: 40%;
+    width: 45%;
     padding-left: 5.33rem;
   }
 
   .img {
     width: 100%;
+    object-fit: cover;
   }
 
   &__article {
     position: relative;
-    margin-bottom: 50px;
-    width: 445px;
+    width: 37.083rem;
   }
 
   &__header {
     margin: 0;
-    margin-bottom: 14px;
+    margin-bottom: 1.1666rem;
     font-family: variables.$Bellefair;
     font-weight: 400;
-    font-size: 100px;
+    font-size: 8.33rem;
     color: variables.$tertiary-color;
     text-transform: uppercase;
   }
 
   &__text {
-    margin-bottom: 54px;
-    font-size: 18px;
+    margin-bottom: 4.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 2.6666rem;
     font-family: variables.$Barlow;
     color: variables.$secudary-color;
   }
@@ -122,21 +120,21 @@ body {
     position: relative;
     width: 100%;
     left: 0;
-    margin-bottom: 28px;
+    margin-bottom: 2.333rem;
   }
 
   .distance {
     display: flex;
-    gap: 79px;
+    gap: 6.583rem;
 
     &__container {
       width: auto;
     }
 
     &__heading {
-      margin-bottom: 12px;
+      margin-bottom: 1rem;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 1.1666rem;
       font-weight: 400;
       letter-spacing: 2.36px;
       font-family: variables.$Barlow-Condensed;
@@ -144,15 +142,11 @@ body {
     }
 
     &__text {
-      font-size: 28px;
+      font-size: 2.333rem;
       font-family: variables.$Bellefair;
       font-weight: 400;
       text-transform: uppercase;
       color: variables.$tertiary-color;
     }
   }
-}
-
-.tab-hover {
-  border-bottom: 3px solid #979797;
 }

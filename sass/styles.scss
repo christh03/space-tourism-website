@@ -2,52 +2,50 @@
 @use "./nav";
 @use "./variables";
 
-body {
+.body {
   background: url("../assets/home/background-home-desktop.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 95vh;
   background-color: variables.$primary-color;
 }
 
 .main {
   width: 100%;
-  padding: 5rem 1rem;
+  padding: 20rem 1rem 0 1rem;
 }
 
 .section {
-  max-width: 1000px;
-  padding: 1.3rem;
-
+  max-width: 90rem;
   margin: 0 auto;
-  padding-top: 13%;
   display: flex;
   justify-content: space-between;
 
   &-article {
     width: 37.5rem;
-    .article__heading {
-      font-size: 12.5rem;
-      font-family: variables.$Bellefair;
-      color: variables.$tertiary-color;
-      font-weight: 400;
-      margin: 0;
-    }
+  }
 
-    .article__sub-heading {
-      font-size: 2.3rem;
-      font-weight: 400;
-      letter-spacing: 4.72px;
-      font-family: variables.$Barlow-Condensed;
-      color: variables.$secudary-color;
-    }
+  .article__heading {
+    font-size: 12.5rem;
+    font-family: variables.$Bellefair;
+    color: variables.$tertiary-color;
+    font-weight: 400;
+    margin: 0;
+  }
 
-    .article__text {
-      font-size: 1.5rem;
-      font-family: variables.$Barlow;
-      font-weight: 400;
-      line-height: 2.66rem;
-      color: variables.$secudary-color;
-    }
+  .article__sub-heading {
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 4.72px;
+    font-family: variables.$Barlow-Condensed;
+    color: variables.$secudary-color;
+  }
+
+  .article__text {
+    font-size: 1.5rem;
+    font-family: variables.$Barlow;
+    font-weight: 400;
+    line-height: 2.66rem;
+    color: variables.$secudary-color;
   }
 
   &__button {
@@ -60,7 +58,7 @@ body {
     font-family: variables.$Bellefair;
     letter-spacing: 2px;
     align-self: center;
-    outline: 88px solid transparent;
+    outline: 7.333rem solid transparent;
     transition: 0.7s ease-in-out;
 
     &:hover {

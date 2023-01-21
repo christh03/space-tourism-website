@@ -20,26 +20,28 @@ tabsContainer.addEventListener("click", function (e) {
 
 const handleHover = function (e) {
   e.preventDefault();
-  const tabs = e.target.closest(".destination__tab");
-  if (!tabs.classList.contains("destination__tab--active")) {
-    tabs.classList.add("tab-hover");
-  }
+  const tab = e.target;
+  const siblings = tab
+    .closest(".destination__tab-container")
+    .querySelectorAll(".destination__tab");
+  siblings.forEach((el) => {
+    if (el === tab) {
+      if (!tab.classList.contains("destination__tab--active")) {
+        tab.style.borderBottom = this;
+      }
+    }
+  });
 };
 
-const handleHoverOut = function (e) {
-  e.preventDefault();
-  const tabs = e.target.closest(".destination__tab");
-  if (!tabs.classList.contains("destination__tab--active")) {
-    tabs.classList.remove("tab-hover");
-  }
-};
-
-tabsContainer.addEventListener("mouseover", handleHover);
-tabsContainer.addEventListener("mouseout", handleHoverOut);
-
-tabs.forEach((t) =>
-  t.addEventListener("click", function (e) {
-    e.preventDefault();
-    e.target.classList.remove("tab-hover");
-  })
+tabsContainer.addEventListener(
+  "mouseover",
+  handleHover.bind("3px  solid  #979797")
 );
+tabsContainer.addEventListener("mouseout", handleHover.bind(""));
+
+tabs.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.target.style = "";
+  });
+});
